@@ -3,36 +3,212 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for Countdown Dots, a local-first countdown app.">
   <title>Privacy Policy - Countdown Dots</title>
   <style>
-    :root { color-scheme: light dark; }
-    body { font: 16px/1.6 system-ui, sans-serif; max-width: 760px; margin: 0 auto; padding: 2rem 1.25rem; }
-    a { color: #0b7a75; }
+    :root {
+      --bg: #07111f;
+      --bg-soft: #111c2b;
+      --panel: rgba(16, 25, 39, 0.88);
+      --panel-strong: #101b2a;
+      --card: #f4f7fb;
+      --text: #eaf4ff;
+      --muted: #a8bfdb;
+      --accent: #6dd5ff;
+      --accent-2: #7c8cff;
+      --line: rgba(255, 255, 255, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(110, 146, 255, 0.16), transparent 20%),
+        linear-gradient(180deg, var(--bg) 0%, #0d182a 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(960px, calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(7, 17, 31, 0.72);
+      backdrop-filter: blur(12px);
+    }
+
+    .site-header .container {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #6dd5ff, #7c8cff 50%, #8c75ff);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.9);
+    }
+
+    .brand-mark::after {
+      inset: 17px;
+      background: rgba(255,255,255,0.17);
+      border-width: 2px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      color: var(--text);
+    }
+
+    main {
+      padding: 54px 0 72px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      box-shadow: 0 18px 50px rgba(6, 15, 29, 0.24);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2.3rem, 5vw, 3.3rem);
+      letter-spacing: -0.05em;
+    }
+
+    .updated {
+      color: var(--muted);
+      margin-bottom: 26px;
+      font-size: 0.98rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+      font-size: 1.38rem;
+      letter-spacing: -0.03em;
+    }
+
+    p, li {
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+
+    footer {
+      padding: 0 0 42px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 640px) {
+      .site-header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 14px 0;
+      }
+
+      .nav {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
   </style>
 </head>
 <body>
-  <p><a href="../">Countdown Dots</a></p>
-  <h1>Privacy Policy for Countdown Dots</h1>
-  <p><strong>Last updated:</strong> September 17, 2026</p>
+  <header class="site-header">
+    <div class="container">
+      <a href="../" class="brand" aria-label="Countdown Dots home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Countdown Dots</span>
+      </a>
 
-  <p>Countdown Dots is designed to work without an account and without collecting personal information.</p>
+      <nav class="nav" aria-label="Privacy navigation">
+        <a href="../">Home</a>
+        <a href="../support/">Support</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>Information stored on your device</h2>
-  <p>Countdown Dots stores the event information you enter, such as event names, dates, optional locations, optional notes, your selected default event, and appearance preferences. This information is stored locally on your device using Apple's local preferences storage.</p>
+  <main>
+    <div class="container">
+      <div class="card">
+        <h1>Privacy Policy</h1>
+        <div class="updated"><strong>Last updated:</strong> September 18, 2026</div>
 
-  <h2>Information we collect</h2>
-  <p>The developer does not collect, receive, sell, or share the information entered into Countdown Dots. The app does not use advertising, analytics, tracking, account registration, cloud synchronization, or third-party data collection services.</p>
+        <p>Countdown Dots is designed to work without an account and without collecting personal information. The app is built to keep your countdown data local to your device.</p>
 
-  <h2>Permissions</h2>
-  <p>Countdown Dots does not request access to your contacts, calendar, reminders, location, photos, camera, microphone, or other personal device data.</p>
+        <h2>Information stored on your device</h2>
+        <p>Countdown Dots stores event information you enter, such as event names, dates, optional locations, optional notes, your selected default event, and app preferences. This is stored locally on your device using the operating system’s standard local storage mechanisms.</p>
 
-  <h2>Data deletion</h2>
-  <p>You can delete individual events inside the app. Removing the app from your device removes the app's locally stored data according to Apple's standard device behavior.</p>
+        <h2>Information we do not collect</h2>
+        <p>The developer does not collect, receive, sell, or share the information entered into Countdown Dots. The app does not use advertising, analytics, tracking, user accounts, cloud synchronization, or third-party data collection services.</p>
 
-  <h2>Changes to this policy</h2>
-  <p>Any changes to this policy will be posted at this URL with an updated revision date.</p>
+        <h2>Permissions</h2>
+        <p>Countdown Dots does not request access to your contacts, calendar, reminders, location, photos, camera, microphone, or other personal device data.</p>
 
-  <h2>Contact</h2>
-  <p>For questions about this policy, please use the <a href="https://github.com/nrushforth/myapps/issues">Countdown Dots support issues page</a>.</p>
+        <h2>Data deletion</h2>
+        <p>You can delete individual events inside the app. Removing the app from your device removes the app’s locally stored data according to the device operating system’s standard behavior.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>Any changes to this policy will be posted at this URL with an updated revision date.</p>
+
+        <h2>Contact</h2>
+        <p>If you have any questions about this Privacy Policy, please use the <a href="https://github.com/nrushforth/myapps/issues">Countdown Dots support issues page</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Countdown Dots
+    </div>
+  </footer>
 </body>
 </html>
